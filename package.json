@@ -1,6 +1,6 @@
 {
   "name": "@circle-vibe/componenets",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "types": "./build/index.d.ts",
   "description": "Shared componenets, utils, hooks for React Router application",
   "scripts": {
