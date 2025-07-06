@@ -15,7 +15,6 @@ interface DropdownMenuProps extends React.HTMLAttributes<HTMLDivElement> {
   readonly onOpenChange?: (open: boolean) => void;
   readonly dropdownPlacement?: Placement;
   readonly zIndex?: number;
-  readonly backgroundColorOfContent?: string;
   readonly strategy?: "fixed" | "absolute";
 }
 
