@@ -10,7 +10,7 @@ interface GridLayoutProps extends React.HTMLAttributes<HTMLDivElement> {
   space?: string;
 }
 
-const GridLayout: ExtendedReactFunctionalComponent<GridLayoutProps> = ({
+export const GridLayout: ExtendedReactFunctionalComponent<GridLayoutProps> = ({
   minWidth = "150px",
   space = "1rem",
   children,
@@ -25,5 +25,3 @@ const GridLayout: ExtendedReactFunctionalComponent<GridLayoutProps> = ({
     </div>
   );
 };
-
-export default GridLayout;
