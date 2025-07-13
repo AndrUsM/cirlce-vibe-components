@@ -1,7 +1,7 @@
 import { formatDate } from "date-fns";
 import { enGB } from "date-fns/locale";
 
-enum FormatDateTime {
+export enum FormatDateTime {
   DATE_TIME = "Pp",
   TIME_LONG = "p",
 }
