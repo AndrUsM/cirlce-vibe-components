@@ -9,3 +9,4 @@ export * from './tooltip';
 export * from './popover';
 export * from './icon';
 export * from './horizontal-divider';
+export * from './loading-overlay';
