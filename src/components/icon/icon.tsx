@@ -12,7 +12,7 @@ export interface IconProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export const Icon = React.forwardRef<HTMLDivElement, IconProps>(
-  ({ name, color, className, size = 10, ...iconAttributes }, ref) => {
+  ({ name, color, size = 10, ...iconAttributes }, ref) => {
     return (
       <div ref={ref} {...iconAttributes}>
         <CIcon
