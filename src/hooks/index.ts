@@ -8,3 +8,4 @@ export * from './use-icons';
 export * from './use-local-storage';
 export * from './use-format-datetime';
 export * from './use-copy-to-clickboard';
+export * from './use-boolean';
