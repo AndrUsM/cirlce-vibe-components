@@ -11,3 +11,4 @@ export * from './icon';
 export * from './horizontal-divider';
 export * from './loading-overlay';
 export * from './modal';
+export * from './tabs';

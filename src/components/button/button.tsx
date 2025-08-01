@@ -6,7 +6,10 @@ import { ButtonColor, ButtonSize } from './types';
 import { ExtendedReactFunctionalComponent } from 'src/types';
 
 export interface ButtonProps
-  extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
+  extends Omit<
+    React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>,
+    'color' | 'size'
+  > {
   size?: ButtonSize;
   color?: ButtonColor;
 }

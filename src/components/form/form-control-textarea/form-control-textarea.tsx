@@ -3,8 +3,10 @@ import { CustomCssVariables } from '../../../types/custom-css-variables';
 import { ExtendedReactFunctionalComponent } from '../../../types/extended-react-functional-component';
 import { FieldContext } from '../field-context/field-context';
 import { getFormikTextreaFormControlValue } from 'src/utils';
+import { Textarea, TextareaStyle } from '../textarea';
 
 import 'src/styles/text-input-generic-styles.scss';
+import { TextareaAutosizeProps } from 'react-textarea-autosize';
 
 export type TextAreaInputProps = Omit<React.InputHTMLAttributes<HTMLTextAreaElement>, 'value' | 'onChange'>;
 
@@ -15,7 +17,7 @@ export const FormControlTextarea: ExtendedReactFunctionalComponent<
 
   return (
     // @ts-ignore
-    <textarea
+    <Textarea
       rows={3}
       {...props}
       {...fieldProvider}
@@ -45,7 +47,7 @@ export const FormControlTextarea: ExtendedReactFunctionalComponent<
               ? '--text-input-error-bg-color'
               : '--text-input-default-bg-color'
           })`,
-        } as CustomCssVariables
+        } as unknown as CustomCssVariables & TextareaStyle
       }
     />
   );
