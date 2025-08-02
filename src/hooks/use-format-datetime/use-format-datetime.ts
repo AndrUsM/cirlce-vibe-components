@@ -4,7 +4,7 @@ import { enGB } from 'date-fns/locale';
 export enum FormatDateTime {
   DATE_TIME = 'Pp',
   TIME_LONG = 'p',
-  BACKEND_DATETIME = 'yyyy-MM-dd',
+  DATE_INPUT = 'yyyy-MM-dd',
 }
 
 export const formatDateTime = (date: Date | number, format: FormatDateTime = FormatDateTime.DATE_TIME) =>
