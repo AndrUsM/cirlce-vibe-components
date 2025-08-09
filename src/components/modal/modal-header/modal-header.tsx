@@ -22,7 +22,7 @@ export const ModalHeader: ExtendedReactFunctionalComponent<ModalHeaderProps> = (
       className={classNames('modal-header', className)}
       {...rest}
     >
-      {children}
+      <div>{children}</div>
 
       <button className="modal-close" onClick={onClose}>
         ×
