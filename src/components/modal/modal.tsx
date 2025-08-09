@@ -4,7 +4,7 @@ import { CustomCssVariables, ExtendedReactFunctionalComponent } from "src/types"
 
 import './modal.scss';
 
-interface ModalProps {
+export interface ModalProps {
   onClose: () => void;
   isOpen: boolean;
   minWidth?: string;
@@ -41,9 +41,6 @@ export const Modal: ExtendedReactFunctionalComponent<ModalProps> = ({
           "--modal-min-width": minWidth,
         } as CustomCssVariables}
       >
-        <button className="modal-close" onClick={onClose}>
-          ×
-        </button>
         {children}
       </div>
     </div>

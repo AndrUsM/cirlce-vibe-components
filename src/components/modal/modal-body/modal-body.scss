@@ -1,0 +1,9 @@
+.modal-body {
+  overflow: hidden;
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+
+  &:hover {
+    overflow: auto !important;
+  }
+}
