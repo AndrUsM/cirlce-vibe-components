@@ -9,7 +9,7 @@ import { ModalHeaderProps } from "../modal-header";
 
 import { ExtendedReactFunctionalComponent } from "src/types";
 
-export interface ModalComponent extends React.FC<ModalProps> {
+export interface ModalComponent extends ExtendedReactFunctionalComponent<ModalProps> {
   Body: ExtendedReactFunctionalComponent<ModalBodyProps>;
   Header: ExtendedReactFunctionalComponent<ModalHeaderProps>;
   Footer: ExtendedReactFunctionalComponent<ModalFooterProps>;
