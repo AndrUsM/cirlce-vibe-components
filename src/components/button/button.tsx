@@ -28,6 +28,7 @@ export const Button: ExtendedReactFunctionalComponent<ButtonProps> = ({
 
   return (
     <button
+      type='button'
       className={classNames(
         `button-style-hover cursor-pointer border-none rounded-1  p-2 text-center ${sizes} ${colors}`,
         className
