@@ -2,15 +2,15 @@ import React, { useEffect } from "react";
 
 import { CustomCssVariables, ExtendedReactFunctionalComponent } from "src/types";
 
-import './modal.scss';
+import './modal-root.scss';
 
-export interface ModalProps {
+export interface ModalRootProps {
   onClose: () => void;
   isOpen: boolean;
   minWidth?: string;
 }
 
-export const Modal: ExtendedReactFunctionalComponent<ModalProps> = ({
+export const ModalRoot: ExtendedReactFunctionalComponent<ModalRootProps> = ({
   onClose,
   isOpen,
   minWidth,
@@ -18,7 +18,9 @@ export const Modal: ExtendedReactFunctionalComponent<ModalProps> = ({
 }) => {
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
+      if (e.key === "Escape") {
+        onClose()
+      };
     };
 
     if (isOpen) {

@@ -1,15 +1,16 @@
 import { ModalBody } from "./modal-body";
 import { ModalHeader } from "./modal-header";
 import { ModalFooter } from "./modal-footer";
-import { Modal } from "./modal";
+import { ModalRoot } from "./modal-root";
 
-import { ModalComponent } from "./types";
+import { ModalComponentComposition } from "./types";
 
-(Modal as ModalComponent).Header = ModalHeader;
-(Modal as ModalComponent).Body = ModalBody;
-(Modal as ModalComponent).Footer = ModalFooter;
-
-const ModalComposedComponent = Modal as ModalComponent;
+const ModalComposedComponent: ModalComponentComposition = {
+  Header: ModalHeader,
+  Body: ModalBody,
+  Footer: ModalFooter,
+  Root: ModalRoot,
+}
 
 export { ModalComposedComponent as Modal };
-export type { ModalComponent };
+export type { ModalComponentComposition };
