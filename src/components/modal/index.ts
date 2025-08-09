@@ -3,8 +3,7 @@ import { ModalHeader } from "./modal-header";
 import { ModalFooter } from "./modal-footer";
 import { Modal } from "./modal";
 
-import { ModalComponent } from "./types/modal-component";
-
+import { ModalComponent } from "./types";
 
 (Modal as ModalComponent).Header = ModalHeader;
 (Modal as ModalComponent).Body = ModalBody;
@@ -13,3 +12,4 @@ import { ModalComponent } from "./types/modal-component";
 const ModalComposedComponent = Modal as ModalComponent;
 
 export { ModalComposedComponent as Modal };
+export type { ModalComponent };
