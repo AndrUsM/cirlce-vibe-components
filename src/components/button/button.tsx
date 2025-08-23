@@ -25,12 +25,13 @@ export const Button: ExtendedReactFunctionalComponent<ButtonProps> = ({
 
   const sizes = BUTTON_SIZE_TO_STYLES_MAP[size];
   const colors = BUTTON_COLOR_TO_STYLES_MAP[disabled ? 'disabled' : color];
+  const effectClassNames = disabled ? 'cursor-not-allowed' : 'cursor-pointer element_effect-hover';
 
   return (
     <button
       type='button'
       className={classNames(
-        `element_effect-hover cursor-pointer border-none rounded-1 p-2 text-center ${sizes} ${colors}`,
+        `cursor-pointer border-none rounded-1 p-2 text-center ${sizes} ${colors} ${effectClassNames}`,
         className
       )}
       {...props}
