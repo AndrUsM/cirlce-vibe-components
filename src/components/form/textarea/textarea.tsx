@@ -12,5 +12,5 @@ export const Textarea: React.FC<TextareaAutosizeProps> = ({
   className,
   ...props
 }) => {
-  return <TextareaAutosize className={classNames("p-2 rounded-2 bg-tertiary", className)} {...props} />;
+  return <TextareaAutosize className={classNames("p-2 form-control_effect-hover rounded-2 bg-tertiary", className)} {...props} />;
 };

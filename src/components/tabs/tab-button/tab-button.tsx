@@ -16,9 +16,9 @@ export const TabsButton: ExtendedReactFunctionalComponent<TabsButtonProps> = ({
   ...rest
 }) => {
   const color: ButtonColor = active && !disabled ? "primary" : "secondary";
+
   return (
-    // @ts-ignore
-    <Button color={color} {...rest}>
+    <Button {...rest} color={color} >
       {children}
     </Button>
   );
