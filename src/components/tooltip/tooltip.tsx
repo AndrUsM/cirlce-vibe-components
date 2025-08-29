@@ -1,4 +1,5 @@
 import React from "react";
+import classNames from "classnames";
 
 import { useTooltip } from "../../hooks/use-tooltip/use-tooltip";
 import { TooltipContent } from "./tooltip-content/tooltip-content";
@@ -14,6 +15,7 @@ interface TooltipProps
 export const Tooltip: React.FC<TooltipProps> = ({
   title,
   children,
+  className,
   ...rest
 }) => {
   const { open, referenceProps, contentProps, transitionStyles } =
@@ -25,7 +27,7 @@ export const Tooltip: React.FC<TooltipProps> = ({
 
   return (
     <>
-      <div className="tooltip" {...rest} {...referenceProps}>
+      <div className={classNames("tooltip", className)} {...rest} {...referenceProps}>
         {children}
       </div>
 

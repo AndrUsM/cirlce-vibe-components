@@ -5,6 +5,7 @@ import {
   useClick,
   useDismiss,
   useFloating,
+  useHover,
   useInteractions,
   useTransitionStyles,
 } from "@floating-ui/react";
@@ -34,6 +35,7 @@ export const usePopover = (options?: UsePopoverOptions) => {
   });
   const { getReferenceProps, getFloatingProps } = useInteractions([
     useDismiss(context),
+    useHover(context),
     useClick(context),
   ]);
   const { setReference, setFloating } = refs;
