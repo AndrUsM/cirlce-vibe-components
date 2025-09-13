@@ -4,6 +4,8 @@ import CIcon from "@coreui/icons-react";
 import classNames from "classnames";
 import { CustomCssVariables } from "src/types";
 
+import './icon.scss';
+
 // https://coreui.io/icons/
 
 export interface IconProps extends React.HTMLAttributes<HTMLDivElement> {
