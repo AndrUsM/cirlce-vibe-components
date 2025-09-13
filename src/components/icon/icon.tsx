@@ -1,6 +1,8 @@
 import React from "react";
 
 import CIcon from "@coreui/icons-react";
+import classNames from "classnames";
+import { CustomCssVariables } from "src/types";
 
 // https://coreui.io/icons/
 
@@ -12,9 +14,12 @@ export interface IconProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export const Icon = React.forwardRef<HTMLDivElement, IconProps>(
-  ({ name, color, size = 10, ...iconAttributes }, ref) => {
+  ({ name, color, size = 10, className, ...iconAttributes }, ref) => {
     return (
-      <div ref={ref} {...iconAttributes}>
+      <div ref={ref} className={classNames("cv-icon", className)}
+      style={{
+        '--cv-icon-size': `${size}px`
+      } as CustomCssVariables} {...iconAttributes}>
         <CIcon
           icon={name}
           size={"custom-size"}
