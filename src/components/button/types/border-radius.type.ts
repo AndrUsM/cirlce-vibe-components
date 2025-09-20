@@ -1,6 +1,6 @@
 export interface ButtonBorderRadius {
-  topLeft?: number
-  topRight?: number
-  bottomLeft?: number
-  bottomRight?: number
+  topLeft?: boolean
+  topRight?: boolean
+  bottomLeft?: boolean
+  bottomRight?: boolean
 }

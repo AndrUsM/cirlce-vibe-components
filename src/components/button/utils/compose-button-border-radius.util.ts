@@ -12,5 +12,5 @@ export const composeButtonBorderRadius = (borderRadius?: ButtonBorderRadius): st
     topRight && 'border-tr-1',
     bottomLeft && 'border-bl-1',
     bottomRight && 'border-br-1',
-  ].join(' ');
+  ].filter(Boolean).join(' ');
 }
