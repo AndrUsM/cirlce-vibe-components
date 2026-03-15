@@ -17,11 +17,11 @@ export const FormControlCheckbox: ExtendedReactFunctionalComponent<
       <Checkbox
         {...props}
         isRequired={isRequired}
+        checked={Boolean(value)}
         onChange={(e) => {
           const value = getFormikFormControlValue(e);
           setValue(value as unknown as string);
         }}
-        checked={Boolean(value)}
       />
 
       <FormControlError />

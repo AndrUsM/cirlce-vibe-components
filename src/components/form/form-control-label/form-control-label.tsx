@@ -5,7 +5,7 @@ import { FieldContext } from '../field-context/field-context';
 import { Label } from '../label/label';
 
 export const FormControlLabel: ExtendedReactFunctionalComponent = ({ children }) => {
-  const { errors, name, isRequired } = useContext(FieldContext);
+  const { errors, isRequired } = useContext(FieldContext);
 
   return (
     <Label isRequired={isRequired} hasErrors={Boolean(errors?.length)}>

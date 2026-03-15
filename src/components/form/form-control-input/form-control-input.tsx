@@ -12,11 +12,13 @@ export const FormControlInput: ExtendedReactFunctionalComponent<
   React.InputHTMLAttributes<HTMLInputElement>
 > = (props) => {
   const fieldProvider = useContext(FieldContext);
+  const { name, value, onBlur, errors } = fieldProvider ?? {};
+  const inputProps = { name, value, errors, onBlur };
 
   return (
     <Input
       {...props}
-      {...fieldProvider}
+      {...inputProps}
       inputMode={props.inputMode ?? 'text'}
       onChange={(e) => {
         const value = getFormikFormControlValue(e);
